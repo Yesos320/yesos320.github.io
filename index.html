@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h2 class="institucion">
+      <!-- Logo al principio -->
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      
+      <!-- Palabra Instituto con letras separadas -->
+      <span class="letra">Instituto Nacional de Usulután</span>
+      
+      
+      <!-- Logo al final -->
+      <img src="assets/INU.png" alt="Logo derecho" class="logo">
+    </h2>
+  </header>
+  
+  
+<nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#instalaciones">Instalaciones</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#personal-administrativo">Personal Administrativo</a></li>
+        <li><a href="#personal-docente">Personal Docente</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio">
+      <h2>Inicio</h2>
+      <p>Bienvenidos a nuestro portal educativo.</p>
+    </section>
+
+    <!-- Sección Eventos -->
+    <section id="eventos">
+      <h2>Eventos</h2>
+      <p>Programación.</p>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros">
+      <h2>Nosotros</h2>
+      <p>Información sobre la escuela.</p>
+    </section>
+
+    <!-- Sección Instalaciones -->
+    <section id="instalaciones">
+      <h2>Instalaciones</h2>
+      <div class="galeria">
+        <figure>
+          <img src="assets/aula.jpg" alt="Aula moderna">
+          <figcaption>Aulas modernas</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/laboratorio.jpg" alt="Laboratorio de ciencias">
+          <figcaption>Laboratorio de ciencias</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/biblioteca.jpg" alt="Biblioteca equipada">
+          <figcaption>Biblioteca equipada</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sección Especialidades -->
+    <section id="especialidades">
+      <h2>Especialidades</h2>
+      <ul>
+        <li>Artes: Pintura, música, y danza.</li>
+        <li>Deportes: Fútbol, baloncesto, atletismo.</li>
+        <li>Ciencias: Laboratorios y proyectos STEM.</li>
+        <li>Tecnología: Programación y robótica.</li>
+      </ul>
+    </section>
+
+    <!-- Sección Personal Administrativo -->
+    <section id="personal-administrativo">
+      <h2>Personal Administrativo</h2>
+      <p>Programación.</p>
+    </section>
+
+    <!-- Sección Personal Docente -->
+    <section id="personal-docente">
+      <h2>Personal Docente</h2>
+      <p>Programación.</p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Escuela. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // Función para iniciar la animación
+function iniciarOla() {
+  const letras = document.querySelectorAll('.letra');
+  letras.forEach((letra, index) => {
+    letra.style.animationPlayState = 'running'; // Inicia la animación
+  });
+}
+
+// Función para detener la animación temporalmente
+function detenerOla() {
+  const letras = document.querySelectorAll('.letra');
+  letras.forEach((letra) => {
+    letra.style.animationPlayState = 'paused'; // Detiene la animación
+  });
+}
+
+// Función para reiniciar la animación después de un intervalo
+function reiniciarOla() {
+  detenerOla();
+  setTimeout(() => {
+    iniciarOla();
+  }, 5000); // Espera 5 segundos antes de reiniciar
+}
+
+// Llamada inicial para iniciar la animación
+document.addEventListener('DOMContentLoaded', (event) => {
+  iniciarOla();
+
+  // Detener la animación después de 10 segundos y luego reiniciar
+  setTimeout(() => {
+    detenerOla();
+    reiniciarOla();
+  }, 10000); // Detener y reiniciar después de 10 segundos
+});
+
+  </script>
+</body>
+</html>

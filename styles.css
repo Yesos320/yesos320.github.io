@@ -1,0 +1,108 @@
+/* Estilo básico para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+header .institucion {
+  display: inline-block;
+  font-size: 30px;
+  position: relative;
+  padding: 20px;
+}
+
+/* Logo al principio */
+header .institucion .logo {
+  height: 250px;
+  margin: 0 20px;
+}
+
+/* Estilos para las letras separadas */
+header .institucion .letra {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100px);  /* Inicia más arriba */
+  animation: ola 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+  margin-right: 5px; /* Espaciado entre las letras */
+}
+
+/* Asignación de retraso a cada letra para el efecto de ola */
+header .institucion .letra:nth-child(1) { --delay: 0s; }
+header .institucion .letra:nth-child(2) { --delay: 0.1s; }
+header .institucion .letra:nth-child(3) { --delay: 0.2s; }
+header .institucion .letra:nth-child(4) { --delay: 0.3s; }
+header .institucion .letra:nth-child(5) { --delay: 0.4s; }
+header .institucion .letra:nth-child(6) { --delay: 0.5s; }
+header .institucion .letra:nth-child(7) { --delay: 0.6s; }
+header .institucion .letra:nth-child(8) { --delay: 0.7s; }
+header .institucion .letra:nth-child(9) { --delay: 0.8s; }
+header .institucion .letra:nth-child(10) { --delay: 0.9s; }
+header .institucion .letra:nth-child(11) { --delay: 1s; }
+header .institucion .letra:nth-child(12) { --delay: 1.1s; }
+header .institucion .letra:nth-child(13) { --delay: 1.2s; }
+header .institucion .letra:nth-child(14) { --delay: 1.3s; }
+header .institucion .letra:nth-child(15) { --delay: 1.4s; }
+header .institucion .letra:nth-child(16) { --delay: 1.5s; }
+header .institucion .letra:nth-child(17) { --delay: 1.6s; }
+header .institucion .letra:nth-child(18) { --delay: 1.7s; }
+
+/* Animación de ola */
+@keyframes ola {
+  0% {
+    transform: translateY(-100px); /* Empieza más arriba */
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-15px); /* Se mueve hacia abajo en la ola */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px); /* Vuelve a subir un poco */
+    opacity: 0;
+  }
+}
+
+/* Espacios entre las palabras */
+header .institucion .espacio {
+  display: inline-block;
+  width: 10px;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #ff5733;
+}
